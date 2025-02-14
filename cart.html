@@ -249,8 +249,8 @@
         <div class="row px-xl-5 pt-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
                 <h5 class="text-secondary text-uppercase mb-4">Get In Touch</h5>
-                <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
+                <p class="mb-4">Your Building Partner</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Nairobi, Kenya</p>
                 <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@wemisi.com</p>
                 <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+254 721 2020520</p>
             </div>
@@ -362,9 +362,9 @@
         });
 
         document.getElementById('checkout-whatsapp').addEventListener('click', function() {
-            let message = 'Hi, I would like to inqure about the following items :\n\n';
+            let message = 'Hi, I would like to inquire about the following items:\n\n';
             cart.forEach(item => {
-                message += `${item.name} - $${item.price}\n`;
+                message += `${item.name} - $${item.price} x ${item.quantity}\n`;
             });
             message += `\nSubtotal: $${subtotal.toFixed(2)}`;
             message += `\nTotal: $${subtotal.toFixed(2)}`;
