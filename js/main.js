@@ -60,6 +60,14 @@
     });
 
 
+
+
+
+    
+
+
+
+
     // Related carousel
     $('.related-carousel').owlCarousel({
         loop: true,
@@ -101,4 +109,31 @@
     });
     
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Handle dropdown toggle
+    var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(function (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function (event) {
+            event.preventDefault();
+            var dropdownMenu = this.nextElementSibling;
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+        var isClickInside = event.target.closest('.dropdown');
+        if (!isClickInside) {
+            var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(function (dropdownMenu) {
+                dropdownMenu.style.display = 'none';
+            });
+        }
+    });
+});
 
